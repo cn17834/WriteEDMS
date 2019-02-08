@@ -25,6 +25,7 @@ public class WriteEMDS {
         int price = 0;
         BufferedWriter writer;
         writer = new BufferedWriter(new FileWriter("EDMSprices.json"));
+        writer.write("[");
         writer.write(start);
         writer.newLine();
         writer.write("  \"edmsSchedule\": [");
@@ -47,6 +48,7 @@ public class WriteEMDS {
         writer.write("  ]");
         writer.newLine();
         writer.write(end);
+        writer.write("]");
         writer.close();
 }
 
